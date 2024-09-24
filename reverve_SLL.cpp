@@ -1,7 +1,3 @@
-
-
-// Iterative C++ program to reverse a linked list
-
 #include <iostream>
 using namespace std;
 
@@ -13,8 +9,7 @@ public:
 };
 struct Node* head;
 
-// Given the head of a list, reverse the list and return the
-// head of reversed list
+
 Node* reverseList() {
     
       // Initialize three pointers: curr, prev and next

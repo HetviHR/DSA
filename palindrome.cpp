@@ -59,6 +59,8 @@
         }
         bool palindrome()
         {
+            cout<<slow->data;
+            cout<<endl<<slow->link->data;
         if (head == NULL || head->link == NULL) {
         return true;
     }
@@ -71,18 +73,19 @@
             slow=slow->link;
             fast=fast->link->link;
         }
-
-        if (fast != NULL) {
+        printdata();
+        if (fast != NULL) 
+        {
         slow = slow->link;
-    }
+        }
 
         prev_of_slow = NULL;
         slow = reverse_LL(slow);
-
+        printdata();
         struct node *first_half = head;
         struct node *second_half = slow;
            // printdata();
-           bool result = true;
+            bool result = true;
             
             while(slow !=NULL)
             {
@@ -98,7 +101,7 @@
 
             second_half = reverse_LL(second_half);
             if (prev_of_slow != NULL) {
-        prev_of_slow->link = second_half;
+            prev_of_slow->link = second_half;
         }
         return result;
         }
